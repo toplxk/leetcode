@@ -1,0 +1,24 @@
+package practise;
+
+/**
+ * @author lixiaokai1
+ * @description
+ * @date 2024/7/4 19:37
+ */
+public class Test_26 {
+    public static int removeDuplicates(int[] nums) {
+        int index = 0;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[index]) {
+                nums[++index] = nums[i];
+            }
+        }
+        return index + 1;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {0,0,1,1,1,2,2,3,3,4};
+        int res = removeDuplicates(nums);
+        System.out.println(res);
+    }
+}
